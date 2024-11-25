@@ -13,12 +13,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         input.addEventListener('keydown', (e) => {
-            if (e.key === 'Backspace' && !input.value) {
-                // Move focus to previous input if backspace is pressed and current input is empty
-                if (index > 0) {
-                    inputs[index - 1].focus();
-                }
-            }
-        });
+    if (e.key === 'Backspace') {
+        // Move focus to previous input if backspace is pressed
+        if (index > 0) {
+            inputs[index - 1].focus();
+        }
+    }
+});
     });
 });
