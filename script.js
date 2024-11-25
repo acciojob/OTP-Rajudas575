@@ -7,9 +7,11 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.target.value) {
             // Move focus to next input if a value is entered
             if (index < inputs.length - 1) {
-                inputs[index + 1].focus();
-                const event = new Event('input', { bubbles: true });
-                inputs[index + 1].dispatchEvent(event);
+                setTimeout(() => {
+                    inputs[index + 1].focus();
+                    const event = new Event('input', { bubbles: true });
+                    inputs[index + 1].dispatchEvent(event);
+                }, 100); // delay of 100 milliseconds
             }
         }
     });
@@ -18,9 +20,11 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.key === 'Backspace') {
             // Move focus to previous input if backspace is pressed
             if (index > 0) {
-                inputs[index - 1].focus();
-                const event = new Event('input', { bubbles: true });
-                inputs[index - 1].dispatchEvent(event);
+                setTimeout(() => {
+                    inputs[index - 1].focus();
+                    const event = new Event('input', { bubbles: true });
+                    inputs[index - 1].dispatchEvent(event);
+                }, 100); // delay of 100 milliseconds
             }
         }
     });
