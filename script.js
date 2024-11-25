@@ -1,5 +1,8 @@
 //your JS code here. If required.
-inputs.forEach((input, index) => {
+document.addEventListener("DOMContentLoaded", () => {
+    const inputs = document.querySelectorAll('.code');
+    
+    inputs.forEach((input, index) => {
     input.addEventListener('input', (e) => {
         if (e.target.value) {
             // Move focus to next input if a value is entered
@@ -21,4 +24,5 @@ inputs.forEach((input, index) => {
             }
         }
     });
+});
 });
